@@ -1,4 +1,4 @@
-package io.cloudacy.pdf_image_renderer
+package net.bpi.pdf_image_renderer
 
 import android.graphics.Bitmap
 import android.graphics.Color

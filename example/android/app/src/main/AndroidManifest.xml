@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="io.cloudacy.pdf_image_renderer_example">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="net.bpi.pdf_image_renderer_example">
    <application
         android:label="pdf_image_renderer_example"
         android:name="${applicationName}"

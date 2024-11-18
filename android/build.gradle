@@ -1,4 +1,4 @@
-group 'io.cloudacy.pdf_image_renderer'
+group 'net.bpi.pdf_image_renderer'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace = "io.cloudacy.pdf_image_renderer"
+    namespace = "net.bpi.pdf_image_renderer"
     compileSdkVersion 31
 
     compileOptions {
