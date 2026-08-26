@@ -4,6 +4,14 @@
 
 Renders PDFs to bitmaps using native renderers.
 
+## iOS dependency management
+
+This plugin supports both [Swift Package Manager](https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers)
+and CocoaPods. Nothing extra is required: if Swift Package Manager is enabled
+(the default since Flutter 3.43) the plugin is resolved through
+`ios/pdf_image_renderer/Package.swift`, otherwise CocoaPods uses
+`ios/pdf_image_renderer.podspec`.
+
 ## Usage
 
 **See the example folder for a fully working flutter example.**

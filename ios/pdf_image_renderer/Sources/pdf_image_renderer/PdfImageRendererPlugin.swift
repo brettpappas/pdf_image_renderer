@@ -1,12 +1,12 @@
 import Flutter
 import UIKit
 
-public class SwiftPdfImageRendererPlugin: NSObject, FlutterPlugin {
+public class PdfImageRendererPlugin: NSObject, FlutterPlugin {
   let dispatchQueue = DispatchQueue(label: "net.bpi.pdf_image_renderer", qos: .userInitiated, attributes: .concurrent)
 
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "pdf_image_renderer", binaryMessenger: registrar.messenger())
-    let instance = SwiftPdfImageRendererPlugin()
+    let instance = PdfImageRendererPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

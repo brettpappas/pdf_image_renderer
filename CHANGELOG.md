@@ -1,3 +1,12 @@
+## Unreleased
+
+- Added Swift Package Manager support for iOS. The plugin now ships an `ios/pdf_image_renderer/Package.swift`
+  alongside the existing podspec, so apps can depend on it through either Swift Package Manager or CocoaPods.
+- **BREAKING CHANGE**: The iOS sources moved from `ios/Classes` to `ios/pdf_image_renderer/Sources/pdf_image_renderer`,
+  and the Objective-C registration shim was removed. `SwiftPdfImageRendererPlugin` is now simply
+  `PdfImageRendererPlugin`. Apps that only use the Dart API are unaffected.
+- Raised the iOS deployment target of the plugin to 12.0.
+
 ## 0.7.0
 
 - **BREAKING CHANGE**: AGP updated to 7.3.0
