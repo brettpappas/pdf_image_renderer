@@ -157,11 +157,16 @@ class PdfImageRendererPlugin : FlutterPlugin, ActivityAware, MethodCallHandler {
                 val pfd: ParcelFileDescriptor =
                     contentResolver.openFileDescriptor(getURI(path), "r")!!
 
-                openPFDs[pfd.fd] = pfd
-                openPDFs[pfd.fd] = PdfRenderer(pfd)
+                // Read the descriptor number before handing the PFD to PdfRenderer.
+                // On API 35+ the constructor calls detachFd(), which marks the PFD
+                // closed, so any later pfd.fd throws IllegalStateException.
+                val id = pfd.fd
+
+                openPFDs[id] = pfd
+                openPDFs[id] = PdfRenderer(pfd)
 
                 handler.post {
-                    result.success(pfd.fd)
+                    result.success(id)
                 }
             } catch (e: Exception) {
                 handler.post {
